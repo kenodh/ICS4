@@ -1,2 +1,4 @@
-# ICS4
-ICS new version 4 is released!
+# ICS
+International Computering Service
+
+Welcome to our Github Page!!!
