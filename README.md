@@ -23,3 +23,12 @@ In internet explorer, there is a search bar at the top. Search there.
 
 JAVA Shovel Library by ICS with updates
 download JAVAShovelv3.java and okhttp-4.9.2.jar and include JAVAShovelv3.java to your code.
+
+
+
+
+
+# Clock House
+
+Clock house version 14
+Go to https://kenodh.github.io/ICS4/clock-house/login.html
