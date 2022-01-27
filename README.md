@@ -16,3 +16,10 @@ want to search something on internet explorer?
 
 Enter some link in the "Enter your website's link" box.
 In internet explorer, there is a search bar at the top. Search there.
+
+
+
+# JAVAShovel version 3
+
+JAVA Shovel Library by ICS with updates
+download JAVAShovelv3.java and okhttp-4.9.2.jar and include JAVAShovelv3.java to your code.
