@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,11 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="ICS Leader">
     <title>ICS · Website (International Computering Service)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/features/">
 
     
-
     <!-- Bootstrap core CSS -->
 <link href="bdist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -28,8 +29,65 @@
           font-size: 3.5rem;
         }
       }
+      
     </style>
-
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .title {
+        color: grey;
+      }
+      
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .button:hover {
+        background-color: #555;
+      }
+      </style>
     
     <!-- Custom styles for this template -->
     <link href="features.css" rel="stylesheet">
@@ -98,6 +156,10 @@
 
   
 
+
+
+
+
   <div class="b-example-divider"></div>
 
   <div class="container col-xxl-8 px-4 py-5">
@@ -125,7 +187,7 @@
         <div>
           <h2>Clock House</h2>
           <p>Clock house is a day-to-day web manager. Made in 2021.</p>
-          <a href="#" class="btn btn-primary">
+          <a class="btn btn-primary" href="clockhouse.zip" download>
             Get it!
           </a>
         </div>
@@ -140,7 +202,7 @@
         <div>
           <h2>HTML OS</h2>
           <p>HTML OS is an OS made like Windows 7 on the web! Get it and have fun!</p>
-          <a href="#" class="btn btn-primary">
+          <a class="btn btn-primary" href="HTML-OS.zip" download>
             Get it!
           </a>
         </div>
@@ -181,10 +243,31 @@
         </div>
         <div>
           <h2>CROSS</h2>
-          <p>CROSS is a programming language made by ICS. It is used to make UI programs. Try it!</p>
-          <a href="#" class="btn btn-primary">
+          <p>CROSS is a programming language made by ICS. It is used to make UI programs. Try it! (before running, read setup.txt)</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Try it!
-          </a>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Enter email</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Your email address:</p>
+                  <textarea class="form-control col-xs-12"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <a href="cross.zip" download>
+                    <button type="button" class="btn btn-default">Download</button>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -193,24 +276,45 @@
   <div class="b-example-divider"></div>
 
   <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Custom cards</h2>
+    <h2 class="pb-2 border-bottom">Competitions</h2>
 
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('download\ \(1\).jpeg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Programming Competition</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                <img src="bitmap.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
               </li>
               <li class="d-flex align-items-center me-3">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                <small>Earth</small>
+                <small>P.C.</small>
               </li>
               <li class="d-flex align-items-center">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                <small>3d</small>
+                <small>Closed</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('download.jpeg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Drawing Competition</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="bitmap.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>D.C.</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>Closed</small>
               </li>
             </ul>
           </div>
@@ -219,40 +323,19 @@
 
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                <small>Pakistan</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                <small>4d</small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Flower Competition</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                <img src="bitmap.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
               </li>
               <li class="d-flex align-items-center me-3">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                <small>California</small>
+                <small>F.C.</small>
               </li>
               <li class="d-flex align-items-center">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                <small>5d</small>
+                <small>Closed</small>
               </li>
             </ul>
           </div>
@@ -264,67 +347,146 @@
   <div class="b-example-divider"></div>
 
   <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Icon grid</h2>
+    <h2 class="pb-2 border-bottom">Things that you can do...</h2>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
       <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#gear-fill"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Learn Programming</h4>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Create robots</h4>
         </div>
       </div>
       <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#gear-fill"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Develop ICS TV</h4>
         </div>
       </div>
       <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#chat-quote-fill"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Tell News</h4>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Join to competitions</h4>
         </div>
       </div>
       <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"/></svg>
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#people-circle"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Be famous</h4>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"/></svg>
         <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
-        <div>
-          <h4 class="fw-bold mb-0">Featured title</h4>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <h4 class="fw-bold mb-0">Contribute to the world</h4>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">The team</h2>
+    <br>
+    <div class="row">
+      
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>ICS LEADER</h2>
+            <p class="title">Programmer & Founder</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Lisasna Avani</h2>
+            <p class="title">Contributer</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Vinuja Kevan</h2>
+            <p class="title">Contributer</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Chamindu</h2>
+            <p class="title">Contributer</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+
+
+
+
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-2">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+        <div class="col-4 offset-1">
+          <form>
+            <h5>Subscribe</h5>
+            <p>Monthly digest of whats new and exciting from us.</p>
+            <div class="d-flex w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2022 ICS, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="link" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="link" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  
 </main>
 
 
@@ -333,6 +495,20 @@
       function NewTab() {
           window.open(
             "login.html", "_blank");
+      }
+
+      function Newab() {
+          window.open(
+            "signup.html", "_blank");
+      }
+
+      function bay(){
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
+        })
       }
     </script>
       
