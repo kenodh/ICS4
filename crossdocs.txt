@@ -1,0 +1,38 @@
+function  	action                              (You can understand the parameters by editing the file named crosslib.py)
+
+create()  	To create a basic window
+run()     	To compile all the widgets
+button()  	To show a button
+imgbutton() To shaw a button with a image
+checkbutton To show a check button 
+text	    To show a text
+uinput      To show a user input widgets
+makeframe   To make the frame
+list        To show a list
+listinsert  To insert an item to the list
+listcompile To make the list stable
+menu        To show a menu
+menupart    To insert an item to a menu
+menucompile To make the menu stable
+menuitemsep To insert a seperator to the menu
+menuitem    To insert a item to a menupart
+message     To show a message
+radiobutton To show a radiobutton
+scale       To show a scale
+scrollbar   To show a scrollbar
+newwindow   To make a new window
+spinbox     To show a spinbox
+panedwindow To show a paned window
+addtopanedw To add an item to the paned window
+labelframe  To show a framed label
+massagebox  To show a messagebox
+ivmtext     To show a text(complex)
+ITexinsert  To insert a text to the ivmtext widget
+ITexend     To add something to the end of an ivmtext
+ITextagadd  To add tag to ivmtext
+ITextagconfg To make a tag of ivmtext stable
+webwindows   To show a window with a webpage in the internet
+webgetsource To get source code of a webpage in the internet
+
+
+
