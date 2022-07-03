@@ -10,26 +10,26 @@
 <p><b>Note:</b> The download will not occur in Edge version 12, IE, Safari 10 (and earlier), or Opera version 12 (and earlier).</p>
 
 <p>
-    Commands:
+    Commands:<br>
+    <br>
+    1. cd fsystem<br>
+    2. find . | cpio -H newc -o | gzip -9 > ../rootfs.cpio.gz<br>
+    3. cd ..<br>
+    4. qemu-system-i386 -kernel bzImage -initrd rootfs.cpio.gz<br>
+    <br>
+    Making ISO:<br>
+    <br>
+    1. mkdir -p test/boot/grub<br>
+    2. nano test/boot/grub/grub.cfg<br>
+    3. <br>
+    menuentry "mySimpleOS" {<br>
+        linux /boot/bzImage<br>
+        initrd /boot/rootfs.cpio.gz<br>
+    }<br>
 
-    1. cd fsystem
-    2. find . | cpio -H newc -o | gzip -9 > ../rootfs.cpio.gz
-    3. cd ..
-    4. qemu-system-i386 -kernel bzImage -initrd rootfs.cpio.gz
-
-    Making ISO:
-
-    1. mkdir -p test/boot/grub
-    2. nano test/boot/grub/grub.cfg
-    3. 
-    menuentry "mySimpleOS" {
-        linux /boot/bzImage
-        initrd /boot/rootfs.cpio.gz
-    }
-
-    4. cp bzImage test/boot/
-    5. cp rootfs.cpio.gz test/boot/
-    6. grub-mkrescue -o mySimpleOS.iso test
+    4. cp bzImage test/boot/<br>
+    5. cp rootfs.cpio.gz test/boot/<br>
+    6. grub-mkrescue -o mySimpleOS.iso test<br>
 </p>
 </body>
 </html>
