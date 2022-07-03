@@ -16,10 +16,12 @@
 
 1. mkdir -p test/boot/grub
 2. nano test/boot/grub/grub.cfg
-3. 
-menuentry "mySimpleOS" {
-    linux /boot/bzImage
-    initrd /boot/rootfs.cpio.gz
+3. <br>
+menuentry "mySimpleOS" {<br>
+<span style="margin-left: 30px;"></span>
+    linux /boot/bzImage<br>
+<span style="margin-left: 30px;"></span>
+    initrd /boot/rootfs.cpio.gz<br>
 }
 
 4. cp bzImage test/boot/
