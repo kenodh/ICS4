@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>ICS OS Lib<p>
+
+<a href="bzImage" download>Download Kernel</a><br><br>
+<a href="rootfs.cpio.gz" download>Download File system</a>
+
+<p><b>Note:</b> The download will not occur in Edge version 12, IE, Safari 10 (and earlier), or Opera version 12 (and earlier).</p>
+
+<p>
+    Commands:<br>
+    <br>
+    1. cd fsystem<br>
+    2. find . | cpio -H newc -o | gzip -9 > ../rootfs.cpio.gz<br>
+    3. cd ..<br>
+    4. qemu-system-i386 -kernel bzImage -initrd rootfs.cpio.gz<br>
+    <br>
+    Making ISO:<br>
+    <br>
+    1. mkdir -p test/boot/grub<br>
+    2. nano test/boot/grub/grub.cfg<br>
+    3. <br>
+    menuentry "mySimpleOS" {<br>
+        linux /boot/bzImage<br>
+        initrd /boot/rootfs.cpio.gz<br>
+    }<br>
+
+    4. cp bzImage test/boot/<br>
+    5. cp rootfs.cpio.gz test/boot/<br>
+    6. grub-mkrescue -o mySimpleOS.iso test<br>
+</p>
+</body>
+</html>
